@@ -52,6 +52,7 @@
 		E7E605DE257ABC7B006BC917 /* CustomeDateFormate+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E605DD257ABC7B006BC917 /* CustomeDateFormate+Date.swift */; };
 		E7E605E6257ABD07006BC917 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E605E5257ABD07006BC917 /* Date+String.swift */; };
 		E7E605EE257B04B7006BC917 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E605ED257B04B6006BC917 /* SpinnerViewController.swift */; };
+		E7E605F3257B1893006BC917 /* RepositoriesVC+Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E605F2257B1893006BC917 /* RepositoriesVC+Textfield.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,7 @@
 		E7E605DD257ABC7B006BC917 /* CustomeDateFormate+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomeDateFormate+Date.swift"; sourceTree = "<group>"; };
 		E7E605E5257ABD07006BC917 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		E7E605ED257B04B6006BC917 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		E7E605F2257B1893006BC917 /* RepositoriesVC+Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoriesVC+Textfield.swift"; sourceTree = "<group>"; };
 		F3463D11D8F0173F563342CC /* Pods_GitHub_Repositories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_Repositories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -345,6 +347,7 @@
 				E7E6048B257A7CB6006BC917 /* RepositoriesVC+TableView.swift */,
 				E7E6048C257A7CB6006BC917 /* RepositoriesVC.swift */,
 				E7E60596257AA62E006BC917 /* RepositoriesVC+DIDynamicDataDelegate.swift */,
+				E7E605F2257B1893006BC917 /* RepositoriesVC+Textfield.swift */,
 			);
 			path = RepositoriesVC;
 			sourceTree = "<group>";
@@ -426,8 +429,8 @@
 			isa = PBXGroup;
 			children = (
 				E7E604E6257A897A006BC917 /* DIDynamicDataDelegate.h */,
-				E7E604E7257A897A006BC917 /* DIDynamicDataHandler.m */,
 				E7E604E9257A897A006BC917 /* DIDynamicDataHandler.h */,
+				E7E604E7257A897A006BC917 /* DIDynamicDataHandler.m */,
 			);
 			path = DIDynamicDataHandler;
 			sourceTree = "<group>";
@@ -756,6 +759,7 @@
 				E7E60493257A7CB6006BC917 /* AlertCustom.swift in Sources */,
 				E7E60578257A9DC0006BC917 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				E7E60497257A7CB6006BC917 /* RepositoriesVC+PresenterDelegate.swift in Sources */,
+				E7E605F3257B1893006BC917 /* RepositoriesVC+Textfield.swift in Sources */,
 				E7E60581257A9DC0006BC917 /* UIButton+AFNetworking.m in Sources */,
 				E7E604EE257A897A006BC917 /* DIDynamicDataHandler.m in Sources */,
 				E7E60499257A7CB6006BC917 /* RepositoriesVC.swift in Sources */,

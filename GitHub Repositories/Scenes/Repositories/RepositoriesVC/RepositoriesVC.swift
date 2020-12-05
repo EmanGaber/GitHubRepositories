@@ -10,12 +10,12 @@ import UIKit
 class RepositoriesVC: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var btnTryConnect: UIButton!
+    @IBOutlet weak var searchTF: UITextField!
+
     var presenter: RepositoriesPresenter!
-    let handler = DIDataHandler.sharedInstance()
-    var quary = "Hellow"
+    var quary = ""
     var page = 1
-    var pageSiza = 10
+    var pageSize = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,23 +23,8 @@ class RepositoriesVC: BaseViewController {
         setupTableView()
         presenter = RepositoriesPresenter(view: self)
         
-        btnTryConnect.isHidden = true
-        CallRepositoriesApi()
+        searchTF.delegate = self
         
-        
-    }
-    
-    
-    func CallRepositoriesApi(){
-        //call api
-        
-        handler?.searchRepositories(withQuary:quary , andPageNum: "\(page)", andPageSize: "\(pageSiza)", with:self)
-    }
-    
-    
-    @IBAction func TryConnect()
-    {
-        CallRepositoriesApi()
     }
     
     

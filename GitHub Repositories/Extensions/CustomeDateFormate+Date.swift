@@ -26,28 +26,49 @@ extension Date {
         // Month
         if let interval = Calendar.current.dateComponents([.month], from: fromDate, to: toDate).month, interval > 0  {
             
-            return interval == 1 ? "\(interval)" + " " + "month ago" : "\(interval) " + " " + "months ago"
+            if interval > 6 {
+                return interval == 1 ? "\(interval)" + " " + "month ago" : "\(interval) " + " " + "months ago"
+            }
+            else
+            {
+                return convertDateFormater(date:"\(fromDate)")
+                
+            }
         }
         
         // Day
         if let interval = Calendar.current.dateComponents([.day], from: fromDate, to: toDate).day, interval > 0  {
             
-            return interval == 1 ? "\(interval)" + " " + "day ago" : "\(interval) " + " " + "days ago"
+            
+            return convertDateFormater(date:"\(fromDate)")
         }
         
         // Hours
         if let interval = Calendar.current.dateComponents([.hour], from: fromDate, to: toDate).hour, interval > 0 {
             
-            return interval == 1 ? "\(interval)" + " " + "hour ago" : "\(interval) " + " " + "hours ago"
+            return convertDateFormater(date:"\(fromDate)")
+
         }
         
         // Minute
         if let interval = Calendar.current.dateComponents([.minute], from: fromDate, to: toDate).minute, interval > 0 {
             
-            return interval == 1 ? "\(interval)" + " " + "minute ago" : "\(interval) " + " " + "minutes ago"
+            return convertDateFormater(date:"\(fromDate)")
+
         }
         
         return "a moment ago"
     }
     
+    
+    func convertDateFormater(date: String) -> String
+        {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss z"
+            let date = dateFormatter.date(from: date)
+            dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+        print(dateFormatter.string(from: date!))
+            return  dateFormatter.string(from: date!)
+
+        }
 }

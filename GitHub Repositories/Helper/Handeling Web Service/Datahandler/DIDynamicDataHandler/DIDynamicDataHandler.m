@@ -39,9 +39,12 @@
     
     NSString* url = [NSString stringWithFormat:@"%@%@?q=%@&page=%@&per_page=%@",WEBSERVICE_BASE_URL,REPOSITORIES_URL,quaryText,pageNum,pageSize];
     
-    NSLog(@"serviceurl+++ %@", url);
+    NSString* urlwithPercentEscapes = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+
     
-    [ses GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSLog(@"serviceurl+++ %@", urlwithPercentEscapes);
+    
+    [ses GET:urlwithPercentEscapes parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"%@",responseObject);
         NSLog(@"%@",operation.response);

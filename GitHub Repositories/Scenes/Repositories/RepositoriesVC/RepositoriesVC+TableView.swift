@@ -67,6 +67,11 @@ extension RepositoriesVC: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func CallRepositoriesApi(){
+        //call api
+        presenter.CallRepositoriesApi(quary: quary, page: page, pageSiza: pageSize, delegate: self)
+
+    }
     
 }
 
