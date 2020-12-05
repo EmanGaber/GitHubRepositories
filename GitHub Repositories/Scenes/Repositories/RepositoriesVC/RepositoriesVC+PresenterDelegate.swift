@@ -7,15 +7,13 @@
 
 import UIKit
 extension RepositoriesVC: RepositoriesView {
-        
-    
-    
-    func OpenTeamDetailsVc(teamId: Int) {
-//        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "TeamDetailsVC") as! TeamDetailsVC
-//
-//        vc.teamID = teamId
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true, completion: nil)
+      
+    func openRepositoryDetailsVc(repository: RepositoryModel) {
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "RepositoryDetailsVC") as! RepositoryDetailsVC
+
+        vc.repo = repository
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
    

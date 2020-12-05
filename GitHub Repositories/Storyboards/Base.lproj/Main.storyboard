@@ -12,55 +12,112 @@
         <scene sceneID="m38-xT-bni">
             <objects>
                 <viewController id="nGv-EE-Yyz" customClass="RepositoriesVC" customModule="GitHub_Repositories" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Fgt-Z7-K5c">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Fgt-Z7-K5c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a77-Tf-fay">
-                                <rect key="frame" x="0.0" y="134" width="414" height="762"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiZ-0x-UV6">
-                                <rect key="frame" x="32" y="10" width="352" height="56"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search GitHub Repositories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9C-9J-Y1G">
-                                        <rect key="frame" x="67" y="25" width="265" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mx5-KS-3aj">
-                                        <rect key="frame" x="8" y="20.5" width="47" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="352" id="4XM-qH-eIG"/>
-                                    <constraint firstAttribute="height" constant="56" id="VfZ-Nl-1q7"/>
-                                </constraints>
-                            </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="repository name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="JAY-ht-Ia4">
-                                <rect key="frame" x="15" y="91" width="384" height="34"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ll" translatesAutoresizingMaskIntoConstraints="NO" id="VvT-nP-f7w">
+                                <rect key="frame" x="0.0" y="-53" width="414" height="949"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a77-Tf-fay">
+                                <rect key="frame" x="0.0" y="148" width="414" height="748"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkX-65-c5h" customClass="UIViewX" customModule="GitHub_Repositories" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-34" width="414" height="181"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiZ-0x-UV6">
+                                        <rect key="frame" x="32" y="44" width="352" height="56"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search GitHub Repositories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9C-9J-Y1G">
+                                                <rect key="frame" x="67" y="27" width="265" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mx5-KS-3aj">
+                                                <rect key="frame" x="18" y="21" width="41" height="39"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="352" id="4XM-qH-eIG"/>
+                                            <constraint firstAttribute="height" constant="56" id="VfZ-Nl-1q7"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AeA-Xe-tR6" customClass="UIViewX" customModule="GitHub_Repositories" customModuleProvider="target">
+                                        <rect key="frame" x="22" y="120" width="370" height="45"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="repository name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="JAY-ht-Ia4">
+                                                <rect key="frame" x="56" y="-0.5" width="307" height="46"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="bbZ-9p-Ne5"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Zfr-uK-f8n">
+                                                <rect key="frame" x="20" y="5.5" width="26" height="34"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="26" id="d2u-7r-ySw"/>
+                                                    <constraint firstAttribute="height" constant="36" id="uNZ-Fa-qLk"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.51142317059999998" green="0.4650604129" blue="0.79219591619999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="JAY-ht-Ia4" firstAttribute="leading" secondItem="AeA-Xe-tR6" secondAttribute="leading" constant="56" id="cJP-t6-LLs"/>
+                                            <constraint firstItem="Zfr-uK-f8n" firstAttribute="centerY" secondItem="AeA-Xe-tR6" secondAttribute="centerY" id="eGZ-Up-Xj1"/>
+                                            <constraint firstItem="JAY-ht-Ia4" firstAttribute="centerY" secondItem="AeA-Xe-tR6" secondAttribute="centerY" id="iPm-r8-Xsu"/>
+                                            <constraint firstItem="Zfr-uK-f8n" firstAttribute="leading" secondItem="AeA-Xe-tR6" secondAttribute="leading" constant="20" id="lw2-eY-HWq"/>
+                                            <constraint firstAttribute="trailing" secondItem="JAY-ht-Ia4" secondAttribute="trailing" constant="7" id="pG5-7c-r5W"/>
+                                            <constraint firstItem="JAY-ht-Ia4" firstAttribute="leading" secondItem="Zfr-uK-f8n" secondAttribute="trailing" constant="10" id="sB4-o7-eGb"/>
+                                            <constraint firstAttribute="height" constant="45" id="y0z-xC-OdB"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="github-color1"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="AeA-Xe-tR6" secondAttribute="trailing" constant="22" id="8O6-J3-6UV"/>
+                                    <constraint firstItem="AeA-Xe-tR6" firstAttribute="top" secondItem="SiZ-0x-UV6" secondAttribute="bottom" constant="20" id="EqO-Tt-9av"/>
+                                    <constraint firstItem="AeA-Xe-tR6" firstAttribute="leading" secondItem="hkX-65-c5h" secondAttribute="leading" constant="22" id="TF2-rX-Zpj"/>
+                                    <constraint firstItem="SiZ-0x-UV6" firstAttribute="top" secondItem="hkX-65-c5h" secondAttribute="top" constant="44" id="hLc-Mh-aNS"/>
+                                    <constraint firstItem="SiZ-0x-UV6" firstAttribute="centerX" secondItem="hkX-65-c5h" secondAttribute="centerX" constant="1" id="k8z-Be-1Uy"/>
+                                    <constraint firstAttribute="height" constant="181" id="kUc-yG-bSt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="27"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MGq-Vk-dbB"/>
                         <color key="backgroundColor" name="GithubColor"/>
                         <constraints>
-                            <constraint firstItem="SiZ-0x-UV6" firstAttribute="top" secondItem="Fgt-Z7-K5c" secondAttribute="top" constant="10" id="19A-gJ-rrO"/>
-                            <constraint firstItem="SiZ-0x-UV6" firstAttribute="centerX" secondItem="Fgt-Z7-K5c" secondAttribute="centerX" constant="1" id="3E6-g0-CZe"/>
+                            <constraint firstItem="VvT-nP-f7w" firstAttribute="top" secondItem="Fgt-Z7-K5c" secondAttribute="top" constant="-53" id="7N1-oo-g4w"/>
+                            <constraint firstAttribute="bottom" secondItem="VvT-nP-f7w" secondAttribute="bottom" id="BkP-qx-zLL"/>
+                            <constraint firstItem="a77-Tf-fay" firstAttribute="top" secondItem="hkX-65-c5h" secondAttribute="bottom" constant="1" id="EH2-Hc-zyg"/>
                             <constraint firstItem="a77-Tf-fay" firstAttribute="leading" secondItem="MGq-Vk-dbB" secondAttribute="leading" id="HSf-Ns-VAE"/>
-                            <constraint firstItem="a77-Tf-fay" firstAttribute="top" secondItem="JAY-ht-Ia4" secondAttribute="bottom" constant="9" id="Han-0x-VxI"/>
-                            <constraint firstItem="JAY-ht-Ia4" firstAttribute="top" secondItem="SiZ-0x-UV6" secondAttribute="bottom" constant="25" id="Hm7-zI-NvY"/>
-                            <constraint firstItem="JAY-ht-Ia4" firstAttribute="leading" secondItem="MGq-Vk-dbB" secondAttribute="leading" constant="15" id="KWL-hU-f2W"/>
-                            <constraint firstItem="MGq-Vk-dbB" firstAttribute="trailing" secondItem="JAY-ht-Ia4" secondAttribute="trailing" constant="15" id="WA9-GV-vlu"/>
+                            <constraint firstItem="VvT-nP-f7w" firstAttribute="trailing" secondItem="MGq-Vk-dbB" secondAttribute="trailing" id="Lir-vo-A24"/>
+                            <constraint firstItem="VvT-nP-f7w" firstAttribute="leading" secondItem="MGq-Vk-dbB" secondAttribute="leading" id="Mkr-jz-dkf"/>
+                            <constraint firstItem="hkX-65-c5h" firstAttribute="leading" secondItem="MGq-Vk-dbB" secondAttribute="leading" id="QLa-LT-oiV"/>
                             <constraint firstAttribute="bottom" secondItem="a77-Tf-fay" secondAttribute="bottom" id="Z4z-BS-z1W"/>
+                            <constraint firstItem="hkX-65-c5h" firstAttribute="top" secondItem="Fgt-Z7-K5c" secondAttribute="top" constant="-34" id="aBR-b7-Rcd"/>
+                            <constraint firstItem="hkX-65-c5h" firstAttribute="trailing" secondItem="MGq-Vk-dbB" secondAttribute="trailing" id="rJl-pY-UWc"/>
                             <constraint firstItem="a77-Tf-fay" firstAttribute="trailing" secondItem="MGq-Vk-dbB" secondAttribute="trailing" id="zPQ-qZ-TfF"/>
                         </constraints>
                     </view>
@@ -73,11 +130,215 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="29.464285714285712"/>
         </scene>
+        <!--Repository DetailsVC-->
+        <scene sceneID="gVl-uu-MsV">
+            <objects>
+                <viewController storyboardIdentifier="RepositoryDetailsVC" id="Ohb-1M-wj6" customClass="RepositoryDetailsVC" customModule="GitHub_Repositories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="eR7-PT-gk0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ll" translatesAutoresizingMaskIntoConstraints="NO" id="bhh-Jb-SVN">
+                                <rect key="frame" x="0.0" y="-53" width="414" height="949"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVN-ZX-OC6" customClass="UIViewX" customModule="GitHub_Repositories" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-34" width="414" height="117"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGj-dt-wRa">
+                                        <rect key="frame" x="13" y="59" width="35" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="IZH-hk-uyN"/>
+                                            <constraint firstAttribute="height" constant="31" id="vNK-OS-cfO"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="xmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="backAction:" destination="Ohb-1M-wj6" eventType="touchUpInside" id="IgW-SE-Hih"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="github-color1"/>
+                                <constraints>
+                                    <constraint firstItem="PGj-dt-wRa" firstAttribute="centerY" secondItem="SVN-ZX-OC6" secondAttribute="centerY" constant="16" id="70q-tW-dgX"/>
+                                    <constraint firstAttribute="height" constant="117" id="91c-tJ-SQT"/>
+                                    <constraint firstItem="PGj-dt-wRa" firstAttribute="leading" secondItem="SVN-ZX-OC6" secondAttribute="leading" constant="13" id="jwu-R3-bZ5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="27"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4W-El-Bu8">
+                                <rect key="frame" x="0.0" y="84" width="414" height="820"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcO-lu-IoJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="820"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7qg-Yu-z0B" customClass="UIImageViewX" customModule="GitHub_Repositories" customModuleProvider="target">
+                                                <rect key="frame" x="165" y="12" width="84" height="84"/>
+                                                <color key="backgroundColor" name="github-color1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="84" id="KqN-lL-7xq"/>
+                                                    <constraint firstAttribute="width" constant="84" id="S2t-Pw-CxB"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="42"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="github-dark"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="owner name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAd-sR-5AP">
+                                                <rect key="frame" x="15" y="120" width="384" height="30"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
+                                                <color key="textColor" name="github-dark"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="repo name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULv-FP-rKN">
+                                                <rect key="frame" x="15" y="149" width="384" height="30"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
+                                                <color key="textColor" name="github-dark"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="details:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQr-ru-LFh">
+                                                <rect key="frame" x="15" y="201" width="384" height="28"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="Ctv-1e-Q4t"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
+                                                <color key="textColor" name="GithubColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="detailsdetailsdetailsdetailsdetailsdetailsdetailsdetailsdetailsdetailsdetails" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHH-pb-eoc">
+                                                <rect key="frame" x="15" y="233" width="384" height="54"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
+                                                <color key="textColor" name="GithubColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Languages:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1s-9a-b1E">
+                                                <rect key="frame" x="15" y="309" width="384" height="28"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="RrM-Qq-tLu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
+                                                <color key="textColor" name="GithubColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="swift" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wp0-7n-2uc">
+                                                <rect key="frame" x="15" y="341" width="384" height="28"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="hS3-RA-G19"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
+                                                <color key="textColor" name="GithubColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ULv-FP-rKN" secondAttribute="trailing" constant="15" id="06i-dI-c06"/>
+                                            <constraint firstItem="wp0-7n-2uc" firstAttribute="top" secondItem="X1s-9a-b1E" secondAttribute="bottom" constant="4" id="0fi-Z7-2GX"/>
+                                            <constraint firstItem="TAd-sR-5AP" firstAttribute="leading" secondItem="xcO-lu-IoJ" secondAttribute="leading" constant="15" id="64l-r6-yfR"/>
+                                            <constraint firstItem="X1s-9a-b1E" firstAttribute="leading" secondItem="xcO-lu-IoJ" secondAttribute="leading" constant="15" id="7qS-lZ-RCF"/>
+                                            <constraint firstItem="TAd-sR-5AP" firstAttribute="top" secondItem="7qg-Yu-z0B" secondAttribute="bottom" constant="24" id="AnG-u5-rWc"/>
+                                            <constraint firstAttribute="trailing" secondItem="ULv-FP-rKN" secondAttribute="trailing" constant="15" id="FqM-Kj-jVz"/>
+                                            <constraint firstAttribute="trailing" secondItem="X1s-9a-b1E" secondAttribute="trailing" constant="15" id="Gyt-xk-fDq"/>
+                                            <constraint firstAttribute="trailing" secondItem="wp0-7n-2uc" secondAttribute="trailing" constant="15" id="HX4-hH-f6b"/>
+                                            <constraint firstItem="NQr-ru-LFh" firstAttribute="top" secondItem="xcO-lu-IoJ" secondAttribute="top" constant="221" id="J3v-bW-PGS"/>
+                                            <constraint firstAttribute="trailing" secondItem="NQr-ru-LFh" secondAttribute="trailing" constant="15" id="LXz-hT-mxe"/>
+                                            <constraint firstItem="ULv-FP-rKN" firstAttribute="top" secondItem="TAd-sR-5AP" secondAttribute="bottom" constant="-1" id="M2v-Om-EZk"/>
+                                            <constraint firstItem="mHH-pb-eoc" firstAttribute="top" secondItem="NQr-ru-LFh" secondAttribute="bottom" constant="4" id="PWj-2h-IPY"/>
+                                            <constraint firstItem="7qg-Yu-z0B" firstAttribute="top" secondItem="xcO-lu-IoJ" secondAttribute="top" constant="12" id="X04-kK-z7h"/>
+                                            <constraint firstAttribute="height" constant="820" id="aFR-af-3wN"/>
+                                            <constraint firstItem="mHH-pb-eoc" firstAttribute="leading" secondItem="xcO-lu-IoJ" secondAttribute="leading" constant="15" id="cM9-ZS-Vdb"/>
+                                            <constraint firstItem="wp0-7n-2uc" firstAttribute="leading" secondItem="xcO-lu-IoJ" secondAttribute="leading" constant="15" id="ip2-yC-Qz2"/>
+                                            <constraint firstAttribute="trailing" secondItem="mHH-pb-eoc" secondAttribute="trailing" constant="15" id="lDh-hV-0WY"/>
+                                            <constraint firstAttribute="trailing" secondItem="TAd-sR-5AP" secondAttribute="trailing" constant="15" id="m9B-WM-cgi"/>
+                                            <constraint firstItem="X1s-9a-b1E" firstAttribute="top" secondItem="mHH-pb-eoc" secondAttribute="bottom" constant="22" id="nFN-WU-nGY"/>
+                                            <constraint firstItem="ULv-FP-rKN" firstAttribute="leading" secondItem="xcO-lu-IoJ" secondAttribute="leading" constant="15" id="nhS-jc-p38"/>
+                                            <constraint firstItem="NQr-ru-LFh" firstAttribute="leading" secondItem="xcO-lu-IoJ" secondAttribute="leading" constant="15" id="qir-qX-DkJ"/>
+                                            <constraint firstItem="7qg-Yu-z0B" firstAttribute="centerX" secondItem="xcO-lu-IoJ" secondAttribute="centerX" id="rJ6-z6-LlS"/>
+                                            <constraint firstAttribute="trailing" secondItem="TAd-sR-5AP" secondAttribute="trailing" constant="15" id="sXf-n4-66h"/>
+                                            <constraint firstItem="NQr-ru-LFh" firstAttribute="top" secondItem="ULv-FP-rKN" secondAttribute="bottom" constant="22" id="yxu-pV-Ryv"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                                <color key="value" name="github-dark"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="J3v-bW-PGS"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="xcO-lu-IoJ" firstAttribute="centerX" secondItem="E4W-El-Bu8" secondAttribute="centerX" id="B3B-w4-uRT"/>
+                                    <constraint firstItem="xcO-lu-IoJ" firstAttribute="leading" secondItem="E4W-El-Bu8" secondAttribute="leading" id="CvQ-2L-1dZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="xcO-lu-IoJ" secondAttribute="trailing" id="LaG-Cb-XTU"/>
+                                    <constraint firstItem="xcO-lu-IoJ" firstAttribute="top" secondItem="E4W-El-Bu8" secondAttribute="top" id="geg-Id-7PD"/>
+                                    <constraint firstItem="xcO-lu-IoJ" firstAttribute="bottom" secondItem="E4W-El-Bu8" secondAttribute="bottom" id="kaP-Js-nrb"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e8S-kP-xdG"/>
+                        <color key="backgroundColor" name="GithubColor"/>
+                        <constraints>
+                            <constraint firstItem="E4W-El-Bu8" firstAttribute="leading" secondItem="e8S-kP-xdG" secondAttribute="leading" id="4y0-Ds-5SK"/>
+                            <constraint firstItem="bhh-Jb-SVN" firstAttribute="top" secondItem="eR7-PT-gk0" secondAttribute="top" constant="-53" id="8em-a9-hxc"/>
+                            <constraint firstItem="SVN-ZX-OC6" firstAttribute="top" secondItem="eR7-PT-gk0" secondAttribute="top" constant="-34" id="8fa-Zx-cbd"/>
+                            <constraint firstAttribute="bottom" secondItem="E4W-El-Bu8" secondAttribute="bottom" constant="-8" id="DgH-GU-I8R"/>
+                            <constraint firstItem="bhh-Jb-SVN" firstAttribute="trailing" secondItem="e8S-kP-xdG" secondAttribute="trailing" id="HfT-nj-CcJ"/>
+                            <constraint firstItem="E4W-El-Bu8" firstAttribute="trailing" secondItem="e8S-kP-xdG" secondAttribute="trailing" id="NFZ-Vb-WNA"/>
+                            <constraint firstItem="SVN-ZX-OC6" firstAttribute="trailing" secondItem="e8S-kP-xdG" secondAttribute="trailing" id="Nvh-kW-HOn"/>
+                            <constraint firstAttribute="bottom" secondItem="bhh-Jb-SVN" secondAttribute="bottom" id="ify-xk-VWr"/>
+                            <constraint firstItem="E4W-El-Bu8" firstAttribute="width" secondItem="eR7-PT-gk0" secondAttribute="width" id="l7m-4J-Qww"/>
+                            <constraint firstItem="bhh-Jb-SVN" firstAttribute="leading" secondItem="e8S-kP-xdG" secondAttribute="leading" id="nR7-8X-kcT"/>
+                            <constraint firstItem="SVN-ZX-OC6" firstAttribute="leading" secondItem="e8S-kP-xdG" secondAttribute="leading" id="od1-q4-Rk7"/>
+                            <constraint firstItem="E4W-El-Bu8" firstAttribute="top" secondItem="SVN-ZX-OC6" secondAttribute="bottom" constant="1" id="slw-zz-HHP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgAvatar" destination="7qg-Yu-z0B" id="d9u-Dl-2m9"/>
+                        <outlet property="lblDetails" destination="mHH-pb-eoc" id="t3w-hQ-Vwf"/>
+                        <outlet property="lblLanguages" destination="wp0-7n-2uc" id="kqN-in-lMe"/>
+                        <outlet property="lblOwnerName" destination="TAd-sR-5AP" id="N4o-YJ-Deu"/>
+                        <outlet property="lblRepoName" destination="ULv-FP-rKN" id="u2y-SQ-TSb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sBr-YF-DOZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924.63768115942037" y="28.794642857142854"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="ll" width="1920" height="1080"/>
         <image name="logo" width="128" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="GithubColor">
             <color red="0.14499999582767487" green="0.15999999642372131" blue="0.18000000715255737" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="github-color1">
+            <color red="0.47299998998641968" green="0.41899999976158142" blue="0.81199997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="github-dark">
+            <color red="0.26399999856948853" green="0.22599999606609344" blue="0.40400001406669617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

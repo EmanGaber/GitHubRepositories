@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString * repository_SCR_TYP;
 @property (nonatomic, strong) OwnerModel * repository_owner;
 @property (nonatomic, strong) NSString *  repository_created_at;
+@property (nonatomic, strong) NSString *  repository_description;
 
 +(RepositoryModel*)getRepositoryModelFromDic:(NSDictionary*)Dic;
 

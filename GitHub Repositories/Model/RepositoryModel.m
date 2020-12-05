@@ -20,8 +20,8 @@
     [model setRepository_full_name:[General CheckNull:Dic [@"full_name"]]];
     [model setRepository_owner:[OwnerModel getOwnerModelFromDic:Dic [@"owner"]]];
     [model setRepository_created_at:[General CheckNull:Dic [@"created_at"]]];
+    [model setRepository_description:[General CheckNull:Dic [@"description"]]];
 
-    
     return model;
 }
 @end

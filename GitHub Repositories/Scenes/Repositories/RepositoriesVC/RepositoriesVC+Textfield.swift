@@ -11,10 +11,18 @@ import UIKit
 extension RepositoriesVC:UITextFieldDelegate
 {
  
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
         
         presenter.RepositorArray?.removeAll()
         page = 1
+        quary = ""
+        tableView.reloadData()
+        
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
         
         if Int(range.length) > 0 {
             
@@ -30,11 +38,11 @@ extension RepositoriesVC:UITextFieldDelegate
                    
                     presenter.RepositorArray?.removeAll()
                     self.tableView.reloadData()
-                    
-                    
+                    page = 1
+                    quary = ""
                     self.loadViewIfNeeded()
                 }else if value.count > 1 {
-                    presenter.CallRepositoriesApi(quary: value, page: page, pageSiza: pageSize, delegate: self)
+                    presenter.callRepositoriesApi(quary: value, page: page, pageSiza: pageSize, delegate: self)
                     
                 }
                
@@ -58,9 +66,16 @@ extension RepositoriesVC:UITextFieldDelegate
                
             print(value)
             quary = value
-                presenter.CallRepositoriesApi(quary: value, page: page, pageSiza: pageSize, delegate: self)
+                presenter.callRepositoriesApi(quary: value, page: page, pageSiza: pageSize, delegate: self)
             }
-            
+            else
+            {
+                presenter.RepositorArray?.removeAll()
+                page = 1
+                quary = ""
+                self.tableView.reloadData()
+
+            }
         }
         
         

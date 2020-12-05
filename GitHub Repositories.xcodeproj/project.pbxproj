@@ -53,6 +53,10 @@
 		E7E605E6257ABD07006BC917 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E605E5257ABD07006BC917 /* Date+String.swift */; };
 		E7E605EE257B04B7006BC917 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E605ED257B04B6006BC917 /* SpinnerViewController.swift */; };
 		E7E605F3257B1893006BC917 /* RepositoriesVC+Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E605F2257B1893006BC917 /* RepositoriesVC+Textfield.swift */; };
+		E7E60609257B3F02006BC917 /* RepositoryDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E60603257B3F02006BC917 /* RepositoryDetailsPresenter.swift */; };
+		E7E6060A257B3F02006BC917 /* RepositoryDetailsVC+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E60605257B3F02006BC917 /* RepositoryDetailsVC+PresenterDelegate.swift */; };
+		E7E6060B257B3F02006BC917 /* RepositoryDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E60606257B3F02006BC917 /* RepositoryDetailsVC.swift */; };
+		E7E6060C257B3F02006BC917 /* RepositoryDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E60608257B3F02006BC917 /* RepositoryDetailsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +156,10 @@
 		E7E605E5257ABD07006BC917 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		E7E605ED257B04B6006BC917 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		E7E605F2257B1893006BC917 /* RepositoriesVC+Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoriesVC+Textfield.swift"; sourceTree = "<group>"; };
+		E7E60603257B3F02006BC917 /* RepositoryDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsPresenter.swift; sourceTree = "<group>"; };
+		E7E60605257B3F02006BC917 /* RepositoryDetailsVC+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RepositoryDetailsVC+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		E7E60606257B3F02006BC917 /* RepositoryDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsVC.swift; sourceTree = "<group>"; };
+		E7E60608257B3F02006BC917 /* RepositoryDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsInteractor.swift; sourceTree = "<group>"; };
 		F3463D11D8F0173F563342CC /* Pods_GitHub_Repositories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_Repositories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -315,6 +323,7 @@
 		E7E60484257A7CB6006BC917 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E7E60601257B3F02006BC917 /* RepositoryDetails */,
 				E7E60485257A7CB6006BC917 /* Repositories */,
 			);
 			path = Scenes;
@@ -507,6 +516,41 @@
 				E7E60576257A9DC0006BC917 /* AFNetworkActivityIndicatorManager.h */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		E7E60601257B3F02006BC917 /* RepositoryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E7E60602257B3F02006BC917 /* Presenter */,
+				E7E60604257B3F02006BC917 /* RepositoryDetailsVC */,
+				E7E60607257B3F02006BC917 /* Interactor */,
+			);
+			path = RepositoryDetails;
+			sourceTree = "<group>";
+		};
+		E7E60602257B3F02006BC917 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E7E60603257B3F02006BC917 /* RepositoryDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E7E60604257B3F02006BC917 /* RepositoryDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				E7E60605257B3F02006BC917 /* RepositoryDetailsVC+PresenterDelegate.swift */,
+				E7E60606257B3F02006BC917 /* RepositoryDetailsVC.swift */,
+			);
+			path = RepositoryDetailsVC;
+			sourceTree = "<group>";
+		};
+		E7E60607257B3F02006BC917 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E7E60608257B3F02006BC917 /* RepositoryDetailsInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -751,6 +795,7 @@
 				E7E605D6257AB7FB006BC917 /* ImageFromUrl+UIImageView.swift in Sources */,
 				E7E6057D257A9DC0006BC917 /* AFHTTPRequestOperation.m in Sources */,
 				E7E60580257A9DC0006BC917 /* UIImageView+AFNetworking.m in Sources */,
+				E7E6060B257B3F02006BC917 /* RepositoryDetailsVC.swift in Sources */,
 				E7E6057B257A9DC0006BC917 /* AFURLSessionManager.m in Sources */,
 				E7E605DE257ABC7B006BC917 /* CustomeDateFormate+Date.swift in Sources */,
 				E7E604CB257A84A1006BC917 /* BaseViewController.swift in Sources */,
@@ -761,6 +806,8 @@
 				E7E60497257A7CB6006BC917 /* RepositoriesVC+PresenterDelegate.swift in Sources */,
 				E7E605F3257B1893006BC917 /* RepositoriesVC+Textfield.swift in Sources */,
 				E7E60581257A9DC0006BC917 /* UIButton+AFNetworking.m in Sources */,
+				E7E6060C257B3F02006BC917 /* RepositoryDetailsInteractor.swift in Sources */,
+				E7E6060A257B3F02006BC917 /* RepositoryDetailsVC+PresenterDelegate.swift in Sources */,
 				E7E604EE257A897A006BC917 /* DIDynamicDataHandler.m in Sources */,
 				E7E60499257A7CB6006BC917 /* RepositoriesVC.swift in Sources */,
 				E7E6057E257A9DC0006BC917 /* AFNetworkReachabilityManager.m in Sources */,
@@ -784,6 +831,7 @@
 				E7E60529257A8CFF006BC917 /* Reachability.m in Sources */,
 				E7E60491257A7CB6006BC917 /* Constants.swift in Sources */,
 				E7E60577257A9DC0006BC917 /* AFURLResponseSerialization.m in Sources */,
+				E7E60609257B3F02006BC917 /* RepositoryDetailsPresenter.swift in Sources */,
 				E7E604ED257A897A006BC917 /* DIDataHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -44,7 +44,7 @@ extension RepositoriesVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        presenter.didSelectTeam(index: indexPath.row)
+        presenter.didSelectRepository(index: indexPath.row)
         
         
     }
@@ -57,19 +57,18 @@ extension RepositoriesVC: UITableViewDataSource, UITableViewDelegate {
         if distanceFromBottom < height {
             print(" you reached end of the table")
             
+            if presenter.RepositorArray != nil {
                 page += 1
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                // your code here
-                self.CallRepositoriesApi()
+                self.callRepositoriesApi()
+            
             }
-               
             
         }
     }
     
-    func CallRepositoriesApi(){
+    func callRepositoriesApi(){
         //call api
-        presenter.CallRepositoriesApi(quary: quary, page: page, pageSiza: pageSize, delegate: self)
+        presenter.callRepositoriesApi(quary: quary, page: page, pageSiza: pageSize, delegate: self)
 
     }
     

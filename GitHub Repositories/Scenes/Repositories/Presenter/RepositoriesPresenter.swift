@@ -10,7 +10,7 @@ import Foundation
 
 protocol RepositoriesView: class {
     
-    func OpenTeamDetailsVc(teamId:Int)
+    func openRepositoryDetailsVc(repository:RepositoryModel)
 }
 
 class RepositoriesPresenter {
@@ -26,11 +26,12 @@ class RepositoriesPresenter {
         self.view = view
     }
     
-    func CallRepositoriesApi(quary:String, page:Int, pageSiza:Int , delegate:RepositoriesVC){
+    func callRepositoriesApi(quary:String, page:Int, pageSiza:Int , delegate:RepositoriesVC){
         
         handler?.searchRepositories(withQuary:quary , andPageNum: "\(page)", andPageSize: "\(pageSiza)", with:delegate)
         
     }
+    
     func configureRepositoryCell(cell: RepositoriesTCell, for index: Int) {
         
         if RepositorArray?.count ?? 0 > 0 {
@@ -49,13 +50,15 @@ class RepositoriesPresenter {
         }
     }
     
-    func didSelectTeam(index: Int) {
-        //        guard let teamId = teamsArray?[index].id else {
-        //            return
-        //        }
-        //
-        //        view?.OpenTeamDetailsVc(teamId: teamId)
+    func didSelectRepository(index: Int) {
+        if RepositorArray?.count ?? 0 > 0
+        {
+                guard let repo = RepositorArray?[index] else {
+                    return
+                }
         
+                view?.openRepositoryDetailsVc(repository: repo)
+        }
     }
     
     
