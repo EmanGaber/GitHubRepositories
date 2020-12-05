@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="T2V-T1-YCy">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-16" width="414" height="927"/>
                                 <color key="backgroundColor" name="github-color1"/>
                                 <color key="tintColor" red="0.96940104169999997" green="0.96940104169999997" blue="0.96940104169999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
@@ -27,8 +27,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="T2V-T1-YCy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0D7-uZ-iWH"/>
-                            <constraint firstAttribute="bottom" secondItem="T2V-T1-YCy" secondAttribute="bottom" id="0eB-uv-Z7W"/>
-                            <constraint firstItem="T2V-T1-YCy" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="4FJ-f2-Jeq"/>
+                            <constraint firstAttribute="bottom" secondItem="T2V-T1-YCy" secondAttribute="bottom" constant="-15" id="0eB-uv-Z7W"/>
+                            <constraint firstItem="T2V-T1-YCy" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-16" id="4FJ-f2-Jeq"/>
                             <constraint firstItem="T2V-T1-YCy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KTX-gE-Kdb"/>
                         </constraints>
                     </view>
@@ -41,7 +41,7 @@
     <resources>
         <image name="logo" width="128" height="128"/>
         <namedColor name="github-color1">
-            <color red="0.47271209959999999" green="0.41882920270000001" blue="0.81180828810000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.47058823529411764" green="0.41568627450980394" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

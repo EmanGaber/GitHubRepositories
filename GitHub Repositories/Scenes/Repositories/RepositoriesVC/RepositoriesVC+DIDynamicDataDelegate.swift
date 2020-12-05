@@ -7,25 +7,7 @@
 
 extension RepositoriesVC :DIDynamicDataDelegate
 {
-    func getRepositoriesSucces(_ repositoryArray: NSMutableArray!, andTotalCount totalCount: String!){
-        self.killLoading()
-        
-        print(repositoryArray.count)
-        tableView.isHidden = false
-        presenter.itemsCount = NSInteger(totalCount)!
-        
-        if presenter.RepositorArray == nil {
-            presenter.RepositorArray = (repositoryArray as! [RepositoryModel])
-        }else
-        {
-            presenter.RepositorArray?.append(contentsOf: (repositoryArray as! [RepositoryModel]))
-        }
-        
-        tableView.reloadData()
-        
-    }
-    
-    
+
     func requestStart() {
         self.loading()
     }
@@ -49,6 +31,25 @@ extension RepositoriesVC :DIDynamicDataDelegate
     func getRepositoriesFail(withResponse ErrorNum: String!) {
         self.killLoading()
         //self.showMessage(msg: ErrorNum, type: .notification)
+        
+    }
+    
+    
+    func getRepositoriesSucces(_ repositoryArray: NSMutableArray!, andTotalCount totalCount: String!){
+        self.killLoading()
+        
+        print(repositoryArray.count)
+        tableView.isHidden = false
+        presenter.itemsCount = NSInteger(totalCount)!
+        
+        if presenter.RepositorArray == nil {
+            presenter.RepositorArray = (repositoryArray as! [RepositoryModel])
+        }else
+        {
+            presenter.RepositorArray?.append(contentsOf: (repositoryArray as! [RepositoryModel]))
+        }
+        
+        tableView.reloadData()
         
     }
     

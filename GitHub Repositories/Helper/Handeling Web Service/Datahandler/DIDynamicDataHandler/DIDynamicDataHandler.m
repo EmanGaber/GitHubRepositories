@@ -30,7 +30,7 @@
     id <DIDynamicDataDelegate> delegatess =_delegate;
     AFHTTPRequestOperationManager * ses = [AFHTTPRequestOperationManager manager];
     
-    [delegatess RequestStart];
+    [delegatess requestStart];
     
     AFJSONResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
     ses.responseSerializer=responseSerializer;
@@ -54,8 +54,8 @@
             NSDictionary* resultDic = responseObject;
             
             if ([resultDic[@"message"] isEqualToString:@"Only the first 1000 search results are available"] || [resultDic[@"message"] isEqualToString:@ "https://api.github.com/search/repositories?q=Hellow&page=18&per_page=10"]) {
-                if ([delegatess respondsToSelector:@selector(GetRepositoriesFailWithResponse:)])
-                    [delegatess GetRepositoriesFailWithResponse:responseObject];
+                if ([delegatess respondsToSelector:@selector(getRepositoriesFailWithResponse:)])
+                    [delegatess getRepositoriesFailWithResponse:responseObject];
                 
             }else {
                 NSArray* itemsArray = resultDic[@"items"];
@@ -70,15 +70,14 @@
                 NSString* totalCount = [NSString stringWithFormat:@"%@",resultDic[@"total_count"]];
                 
 
-                [delegatess GetRepositoriesSucces:finalRepoArray andTotalCount: totalCount];
+                [delegatess getRepositoriesSucces:finalRepoArray andTotalCount: totalCount];
             }
             
         }else
-            
         {
             
-            if ([delegatess respondsToSelector:@selector(GetRepositoriesFailWithResponse:)])
-                [delegatess GetRepositoriesFailWithResponse:responseObject];
+            if ([delegatess respondsToSelector:@selector(getRepositoriesFailWithResponse:)])
+                [delegatess getRepositoriesFailWithResponse:responseObject];
             
         }
         
@@ -86,11 +85,71 @@
         //NSLog(@"%@",operation.responseObject);
         //NSLog(@"%@",error);
         
-        if ([delegatess respondsToSelector:@selector(GetRepositoriesFailWithResponse:)])
-            [delegatess GetRepositoriesFailWithResponse:error.localizedDescription];
+        if ([delegatess respondsToSelector:@selector(getRepositoriesFailWithResponse:)])
+            [delegatess getRepositoriesFailWithResponse:error.localizedDescription];
     }];
 }
 
+-(void)getRepositorDetailsWithRepoFullName:(NSString*)full_name
+{
+    id <DIDynamicDataDelegate> delegatess =_delegate;
+    AFHTTPRequestOperationManager * ses = [AFHTTPRequestOperationManager manager];
+    
+    [delegatess requestStart];
+    
+    AFJSONResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+    ses.responseSerializer=responseSerializer;
+    ses.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json", nil];
+    [ses.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    
+    NSString* url = [NSString stringWithFormat:@"%@%@%@",WEBSERVICE_BASE_URL,REPOSITORY_DETAILS_URL,full_name];
+    
+    NSString* urlwithPercentEscapes = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+
+    
+    NSLog(@"serviceurl+++ %@", urlwithPercentEscapes);
+    
+    [ses GET:urlwithPercentEscapes parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSLog(@"%@",responseObject);
+        NSLog(@"%@",operation.response);
+        
+        
+        if (responseObject != nil){
+            NSDictionary* resultDic = responseObject;
+            
+            if ([resultDic[@"message"] isEqualToString:@"Only the first 1000 search results are available"] || [resultDic[@"message"] isEqualToString:@ "https://api.github.com/search/repositories?q=Hellow&page=18&per_page=10"]) {
+                if ([delegatess respondsToSelector:@selector(getRepositoriesFailWithResponse:)])
+                    [delegatess getRepositoriesFailWithResponse:responseObject];
+                
+            }else {
+                NSDictionary* repoDic = resultDic;
+                
+                RepositoryModel* repoModel = [RepositoryModel getRepositoryModelFromDic:repoDic];
+                    
+                [delegatess getRepositoryDetailsSucces:repoModel];
+
+                }
+                
+            
+            
+        }else
+            
+        {
+            
+            if ([delegatess respondsToSelector:@selector(getRepositoriesFailWithResponse:)])
+                [delegatess getRepositoriesFailWithResponse:responseObject];
+            
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //NSLog(@"%@",operation.responseObject);
+        //NSLog(@"%@",error);
+        
+        if ([delegatess respondsToSelector:@selector(getRepositoriesFailWithResponse:)])
+            [delegatess getRepositoriesFailWithResponse:error.localizedDescription];
+    }];
+}
 
 @end
 

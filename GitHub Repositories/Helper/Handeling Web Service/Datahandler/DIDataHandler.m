@@ -53,4 +53,12 @@
     
 }
 
+
+-(void)getRepositorDetailsWithRepoFullName:(NSString*)full_name WithDelegate:(id <DIDynamicDataDelegate>)delegate
+{
+    self.dynamicDataHandler.delegate=delegate;
+    [self.dynamicDataHandler getRepositorDetailsWithRepoFullName:full_name];
+    
+}
+
 @end

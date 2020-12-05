@@ -15,4 +15,6 @@
 
 -(void)searchRepositoriesWithQuary:(NSString*)quaryText andPageNum:(NSString*)pageNum andPageSize:(NSString*)pageSize;
 
+-(void)getRepositorDetailsWithRepoFullName:(NSString*)full_name;
+
 @end

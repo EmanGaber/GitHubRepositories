@@ -6,7 +6,7 @@
 //
 
 import UIKit
-extension RepositoriesVC: RepositoryDetailsView {
+extension RepositoryDetailsVC: RepositoryDetailsView {
       
 
     

@@ -16,14 +16,21 @@ class RepositoryDetailsPresenter {
     
     private weak var view: RepositoryDetailsView?
     private let interactor = RepositoryDetailsInteractor()
-    
+    let handler = DIDataHandler.sharedInstance()
+
     
     init(view: RepositoryDetailsView?) {
         self.view = view
     }
     
   
+    func callRepositoryDetailsApi(fullName:String, delegate:RepositoryDetailsVC){
+        
+        handler?.getRepositorDetails(withRepoFullName:fullName , with: delegate)
+        
+    }
     
+   
 }
 
 

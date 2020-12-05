@@ -7,16 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RepositoryModel.h"
 
 @protocol DIDynamicDataDelegate <NSObject>
 
 @required
--(void)RequestStart;
--(void)RequestEndDueToInternetError;
--(void)RequestEndDueToError:(NSError *)error;
+-(void)requestStart;
+-(void)requestEndDueToInternetError;
+-(void)requestEndDueToError:(NSError *)error;
 
--(void)GetRepositoriesSucces:(NSMutableArray*)repositoryArray andTotalCount: (NSString*)totalCount;
--(void)GetRepositoriesFailWithResponse:(NSString*)ErrorNum;
+
+@optional
+-(void)getRepositoriesSucces:(NSMutableArray*)repositoryArray andTotalCount: (NSString*)totalCount;
+-(void)getRepositoriesFailWithResponse:(NSString*)ErrorNum;
+
+-(void)getRepositoryDetailsSucces:(RepositoryModel*)repositoryModel;
+
 
 
 @end

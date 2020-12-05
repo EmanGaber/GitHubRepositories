@@ -15,4 +15,6 @@
 
 -(void)searchRepositoriesWithQuary:(NSString*)quaryText andPageNum:(NSString*)pageNum andPageSize:(NSString*)pageSize WithDelegate:(id <DIDynamicDataDelegate>)delegate;
 
+-(void)getRepositorDetailsWithRepoFullName:(NSString*)full_name WithDelegate:(id <DIDynamicDataDelegate>)delegate;
+
 @end

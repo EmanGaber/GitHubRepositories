@@ -20,7 +20,7 @@ class RepositoriesVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+
             searchTF.attributedPlaceholder = NSAttributedString(string: "repository name",
                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(white: 1, alpha: 0.9)])
         

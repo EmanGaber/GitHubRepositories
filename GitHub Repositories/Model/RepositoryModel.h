@@ -18,6 +18,8 @@
 @property (nonatomic, strong) OwnerModel * repository_owner;
 @property (nonatomic, strong) NSString *  repository_created_at;
 @property (nonatomic, strong) NSString *  repository_description;
+@property (nonatomic, strong) NSString *  repository_language;
+@property (nonatomic, strong) NSString *  repository_html_url;
 
 +(RepositoryModel*)getRepositoryModelFromDic:(NSDictionary*)Dic;
 

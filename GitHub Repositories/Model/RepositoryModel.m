@@ -22,6 +22,9 @@
     [model setRepository_created_at:[General CheckNull:Dic [@"created_at"]]];
     [model setRepository_description:[General CheckNull:Dic [@"description"]]];
 
+    [model setRepository_language:[General CheckNull:Dic [@"language"]]];
+    [model setRepository_html_url:[General CheckNull:Dic [@"html_url"]]];
+
     return model;
 }
 @end

@@ -13,5 +13,5 @@
 
 #define WEBSERVICE_BASE_URL @"https://api.github.com/"
 #define REPOSITORIES_URL @"search/repositories"
-
+#define REPOSITORY_DETAILS_URL @"repos/"
 

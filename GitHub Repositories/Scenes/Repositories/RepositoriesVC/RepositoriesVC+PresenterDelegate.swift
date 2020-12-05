@@ -11,7 +11,7 @@ extension RepositoriesVC: RepositoriesView {
     func openRepositoryDetailsVc(repository: RepositoryModel) {
         let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "RepositoryDetailsVC") as! RepositoryDetailsVC
 
-        vc.repo = repository
+        vc.repoFullName = repository.repository_full_name
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
