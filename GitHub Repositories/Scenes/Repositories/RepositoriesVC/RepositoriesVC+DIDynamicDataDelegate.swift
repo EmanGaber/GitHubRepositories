@@ -16,14 +16,14 @@ extension RepositoriesVC :DIDynamicDataDelegate
         self.killLoading()
         
         self.showMessage(msg:"Internet Connection Not Available!", type: .notification)
-        tableView.isHidden = true
+        repoTableView.isHidden = true
     }
     
     
     func requestEndDue(toError error: Error!) {
         self.killLoading()
         self.showMessage(msg: error.localizedDescription, type: .notification)
-        tableView.isHidden = true
+        repoTableView.isHidden = true
         
     }
     
@@ -39,17 +39,17 @@ extension RepositoriesVC :DIDynamicDataDelegate
         self.killLoading()
         
         print(repositoryArray.count)
-        tableView.isHidden = false
+        repoTableView.isHidden = false
         presenter.itemsCount = NSInteger(totalCount)!
         
-        if presenter.RepositorArray == nil {
-            presenter.RepositorArray = (repositoryArray as! [RepositoryModel])
+        if presenter.repositorArray == nil {
+            presenter.repositorArray = (repositoryArray as! [RepositoryModel])
         }else
         {
-            presenter.RepositorArray?.append(contentsOf: (repositoryArray as! [RepositoryModel]))
+            presenter.repositorArray?.append(contentsOf: (repositoryArray as! [RepositoryModel]))
         }
         
-        tableView.reloadData()
+        repoTableView.reloadData()
         
     }
     

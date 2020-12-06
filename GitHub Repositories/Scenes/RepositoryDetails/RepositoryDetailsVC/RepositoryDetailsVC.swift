@@ -16,7 +16,6 @@ class RepositoryDetailsVC: BaseViewController {
     @IBOutlet weak var lblLanguages: UILabel!
     @IBOutlet weak var imgAvatar: UIImageView!
     
-    var repo: RepositoryModel!
     var repoFullName = ""
     var presenter: RepositoryDetailsPresenter!
     
@@ -25,7 +24,6 @@ class RepositoryDetailsVC: BaseViewController {
         
         presenter = RepositoryDetailsPresenter(view: self)
         presenter.callRepositoryDetailsApi(fullName:repoFullName , delegate: self)
-        
         
     }
     
@@ -36,25 +34,17 @@ class RepositoryDetailsVC: BaseViewController {
     
     
     @IBAction func openUserProfile(_ sender: Any) {
-        let userUrl = repo.repository_owner.owner_html_url!
-
-        openUrl(scheme: userUrl)
+        presenter.openUserProfile()
     }
     
     @IBAction func openProjectUrl(_ sender: Any) {
-    
-        let projectUrl = repo.repository_html_url!
-        openUrl(scheme: projectUrl)
+        presenter.openProjectUrl()
     }
-    
     
     @IBAction func openCommits(_ sender: Any) {
         
-        guard let fullName = repo.repository_full_name else {
-            return
-        }
-        let projectTreeUrl = "https://github.com/\(fullName)/commits"
-        openUrl(scheme: projectTreeUrl)
+        presenter.openCommits()
+      
     }
     
     

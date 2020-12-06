@@ -8,6 +8,7 @@
 import Foundation
 
 extension RepositoryDetailsVC:DIDynamicDataDelegate{
+
     
     func requestStart() {
         self.loading()
@@ -15,10 +16,9 @@ extension RepositoryDetailsVC:DIDynamicDataDelegate{
     
     func requestEndDueToInternetError() {
         self.killLoading()
-        
         self.showMessage(msg:"Internet Connection Not Available!", type: .notification)
     }
-    
+
     
     func requestEndDue(toError error: Error!) {
         self.killLoading()
@@ -35,23 +35,24 @@ extension RepositoryDetailsVC:DIDynamicDataDelegate{
     
     func getRepositoryDetailsSucces(_ repositoryModel: RepositoryModel!) {
         self.killLoading()
-        repo = repositoryModel
+        presenter.repo = repositoryModel
+        
         setViewData()
     }
     
     func setViewData()
     {
-        lblOwnerName.text = repo.repository_owner.owner_login
-        lblRepoName.text = repo.repository_name
-        lblLanguages.text = repo.repository_language
-        lblDetails.text = repo.repository_description
+        lblOwnerName.text = presenter.repo.repository_owner.owner_login
+        lblRepoName.text = presenter.repo.repository_name
+        lblLanguages.text = presenter.repo.repository_language
+        lblDetails.text = presenter.repo.repository_description
         
-        guard let avatar = repo.repository_owner.owner_avatar_url  else {
+        guard let avatar = presenter.repo.repository_owner.owner_avatar_url  else {
             return
         }
         imgAvatar.load(url: URL.init(string: avatar)!)
         
-        let date = repo?.repository_created_at?.date.timeAgoSinceDate()
+        let date = presenter.repo?.repository_created_at?.date.timeAgoSinceDate()
         lblRepoDate.text = "\(date ?? "")"
     }
 }

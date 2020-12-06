@@ -8,21 +8,20 @@
 import UIKit
 
 class RepositoriesVC: BaseViewController {
-    
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchTF: UITextField!
 
+    @IBOutlet weak var repoTableView: UITableView!
+    @IBOutlet weak var searchTF: UITextField!
+    
     var presenter: RepositoriesPresenter!
-    var quary = ""
+    var query = ""
     var page = 1
     var pageSize = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-            searchTF.attributedPlaceholder = NSAttributedString(string: "repository name",
-                                                                attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(white: 1, alpha: 0.9)])
+        
+        searchTF.attributedPlaceholder = NSAttributedString(string: "Repository Name",attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(white: 1, alpha: 0.9)])
         
         
         setupTableView()

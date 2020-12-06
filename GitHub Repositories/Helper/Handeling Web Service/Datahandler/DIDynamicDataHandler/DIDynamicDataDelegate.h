@@ -19,7 +19,7 @@
 
 @optional
 -(void)getRepositoriesSucces:(NSMutableArray*)repositoryArray andTotalCount: (NSString*)totalCount;
--(void)getRepositoriesFailWithResponse:(NSString*)ErrorNum;
+-(void)getRepositoriesFailWithResponse:(NSString*)ErrorMsg;
 
 -(void)getRepositoryDetailsSucces:(RepositoryModel*)repositoryModel;
 

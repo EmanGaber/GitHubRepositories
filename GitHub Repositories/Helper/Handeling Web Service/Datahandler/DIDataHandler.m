@@ -46,10 +46,10 @@
 }
 
 
--(void)searchRepositoriesWithQuary:(NSString*)quaryText andPageNum:(NSString*)pageNum andPageSize:(NSString*)pageSize WithDelegate:(id <DIDynamicDataDelegate>)delegate
+-(void)searchRepositoriesWithQuery:(NSString*)quaryText andPageNum:(NSString*)pageNum andPageSize:(NSString*)pageSize WithDelegate:(id <DIDynamicDataDelegate>)delegate
 {
     self.dynamicDataHandler.delegate=delegate;
-    [self.dynamicDataHandler searchRepositoriesWithQuary:quaryText andPageNum:pageNum andPageSize:pageSize];
+    [self.dynamicDataHandler searchRepositoriesWithQuery:quaryText andPageNum:pageNum andPageSize:pageSize];
     
 }
 

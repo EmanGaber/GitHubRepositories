@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9370EF6F-6F97-46EE-826E-5B309AA4AF37"
+            uuid = "9B8EAC64-13C7-4030-B3BB-62F75CE8839E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GitHub Repositories/Helper/Handeling Web Service/Datahandler/DIDynamicDataHandler/DIDynamicDataHandler.m"
+            filePath = "GitHub RepositoriesTests/SearchRepo/SearchRepoTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "-searchRepositoriesWithQuary:andPageNum:andPageSize:"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "getRepositoriesFail(withResponse:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0B08102-61E9-4919-A7B1-E9E019192398"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHub RepositoriesTests/SearchRepo/SearchRepoTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "getRepositoriesSucces(_:andTotalCount:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

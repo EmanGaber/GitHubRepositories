@@ -13,10 +13,10 @@ extension RepositoriesVC:UITextFieldDelegate
  
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         
-        presenter.RepositorArray?.removeAll()
+        presenter.repositorArray?.removeAll()
         page = 1
-        quary = ""
-        tableView.reloadData()
+        query = ""
+        repoTableView.reloadData()
         
         return true
     }
@@ -32,17 +32,17 @@ extension RepositoriesVC:UITextFieldDelegate
             if (textField.text?.count ?? 0) > 0 {
                 value = (textField.text! as NSString?)?.substring(to: (textField.text?.count ?? 0) - 1) ?? ""
                 
-                quary = value
+                query = value
                 
                 if value == "" {
                    
-                    presenter.RepositorArray?.removeAll()
-                    self.tableView.reloadData()
+                    presenter.repositorArray?.removeAll()
+                    self.repoTableView.reloadData()
                     page = 1
-                    quary = ""
+                    query = ""
                     self.loadViewIfNeeded()
                 }else if value.count > 1 {
-                    presenter.callRepositoriesApi(quary: value, page: page, pageSiza: pageSize, delegate: self)
+                    presenter.callRepositoriesApi(query: value, page: page, pageSiza: pageSize, delegate: self)
                     
                 }
                
@@ -65,15 +65,15 @@ extension RepositoriesVC:UITextFieldDelegate
             if value.count > 1 {
                
             print(value)
-            quary = value
-                presenter.callRepositoriesApi(quary: value, page: page, pageSiza: pageSize, delegate: self)
+                query = value
+                presenter.callRepositoriesApi(query: value, page: page, pageSiza: pageSize, delegate: self)
             }
             else
             {
-                presenter.RepositorArray?.removeAll()
+                presenter.repositorArray?.removeAll()
                 page = 1
-                quary = ""
-                self.tableView.reloadData()
+                query = ""
+                self.repoTableView.reloadData()
 
             }
         }

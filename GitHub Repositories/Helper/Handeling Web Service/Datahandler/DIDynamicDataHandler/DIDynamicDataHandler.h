@@ -13,7 +13,7 @@
 
 @property (nonatomic, weak) id <DIDynamicDataDelegate> delegate;
 
--(void)searchRepositoriesWithQuary:(NSString*)quaryText andPageNum:(NSString*)pageNum andPageSize:(NSString*)pageSize;
+-(void)searchRepositoriesWithQuery:(NSString*)quaryText andPageNum:(NSString*)pageNum andPageSize:(NSString*)pageSize;
 
 -(void)getRepositorDetailsWithRepoFullName:(NSString*)full_name;
 

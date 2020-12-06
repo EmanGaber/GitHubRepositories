@@ -17,7 +17,7 @@ class RepositoriesPresenter {
     
     private weak var view: RepositoriesView?
     private let interactor = RepositoriesInteractor()
-    var RepositorArray: [RepositoryModel]?
+    var repositorArray: [RepositoryModel]?
     
     var itemsCount = 0
     let handler = DIDataHandler.sharedInstance()
@@ -26,16 +26,16 @@ class RepositoriesPresenter {
         self.view = view
     }
     
-    func callRepositoriesApi(quary:String, page:Int, pageSiza:Int , delegate:RepositoriesVC){
+    func callRepositoriesApi(query:String, page:Int, pageSiza:Int , delegate:DIDynamicDataDelegate){
         
-        handler?.searchRepositories(withQuary:quary , andPageNum: "\(page)", andPageSize: "\(pageSiza)", with:delegate)
+        handler?.searchRepositories(withQuery:query , andPageNum: "\(page)", andPageSize: "\(pageSiza)", with:delegate)
         
     }
     
     func configureRepositoryCell(cell: RepositoriesTCell, for index: Int) {
         
-        if RepositorArray?.count ?? 0 > 0 {
-            let repo = RepositorArray?[index]
+        if repositorArray?.count ?? 0 > 0 {
+            let repo = repositorArray?[index]
             
             guard let avatar = repo?.repository_owner.owner_avatar_url  else {
                 return
@@ -45,19 +45,25 @@ class RepositoriesPresenter {
             cell.lblRepoName.text = "Repository Name: \(repo?.repository_name ?? "")"
             cell.lblRepoOwner.text = "Repository Owner: \( repo?.repository_owner.owner_login ?? "")"
             
-            let date = repo?.repository_created_at?.date.timeAgoSinceDate()
-            cell.lblRepoDate.text = "Creation date: \(date ?? "")"
+            let date = getRepoCreationDateFrom(date: repo?.repository_created_at ?? "")
+            
+            cell.lblRepoDate.text = "Creation date: \(date)"
         }
     }
     
+    func getRepoCreationDateFrom(date:String) -> String
+    {
+        return date.date.timeAgoSinceDate()
+    }
+    
     func didSelectRepository(index: Int) {
-        if RepositorArray?.count ?? 0 > 0
+        if repositorArray?.count ?? 0 > 0
         {
-                guard let repo = RepositorArray?[index] else {
-                    return
-                }
-        
-                view?.openRepositoryDetailsVc(repository: repo)
+            guard let repo = repositorArray?[index] else {
+                return
+            }
+            
+            view?.openRepositoryDetailsVc(repository: repo)
         }
     }
     
