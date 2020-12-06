@@ -44,7 +44,7 @@
         ses.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json", nil];
         [ses.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
         
-        NSString* url = [NSString stringWithFormat:@"%@%@?q=%@&page=%@&per_page=%@",WEBSERVICE_BASE_URL,REPOSITORIES_URL,quaryText,pageNum,pageSize];
+        NSString* url = [NSString stringWithFormat:@"%@%@?q=%s&page=%@&per_page=%@",WEBSERVICE_BASE_URL,REPOSITORIES_URL,"",pageNum,pageSize];
         
         NSString* urlwithPercentEscapes = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         

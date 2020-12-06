@@ -37,7 +37,7 @@ extension RepositoriesVC: UITableViewDataSource, UITableViewDelegate {
         bgColorView.backgroundColor = UIColor.clear
         cell.selectedBackgroundView = bgColorView
         
-        presenter.configureRepositoryCell(cell: cell, for: indexPath.row)
+        
         return cell
         
     }
@@ -48,7 +48,7 @@ extension RepositoriesVC: UITableViewDataSource, UITableViewDelegate {
         
         
     }
-    
+     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let height = scrollView.frame.size.height
