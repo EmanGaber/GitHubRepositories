@@ -3,11 +3,11 @@
 Retrieve public GitHub repositories, with search feature.
 
 # Search GitHub Repositories
-* I used api.github end point to fetch repositories that start contain search text.
+* I used api.github end point to fetch repositories that contain search text.
 * Fetching part implemented using Objective C (Including JSON parsing).
 * UI part implemented using swift.
-* Using MVVP architectural pattern.
-* Create UITest and Unit Test(Validation, Business logic, Success cases and Fail cases).
+* Using MVP architectural pattern.
+* Create UITest and UnitTest(Validation, Business logic, Success cases and Fail cases).
 
 
 ![](GitHub%20Repositories/images/splash.png)
